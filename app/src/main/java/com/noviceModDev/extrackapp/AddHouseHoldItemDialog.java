@@ -6,21 +6,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
-
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.DialogFragment;
-
 import com.noviceModDev.extrackapp.databinding.DialogAddHouseholdItemsBinding;
-
 
 public class AddHouseHoldItemDialog extends DialogFragment{
     // Use DialogFragment as container for the dialog

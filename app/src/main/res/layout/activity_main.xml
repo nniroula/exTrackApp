@@ -35,4 +35,9 @@
 
         tools:ignore="ImageContrastCheck" />
 
+    <include
+        android:id="@+id/hosueHoldContentXMLfile"
+        layout="@layout/household_content"
+        android:layout_height="663dp" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,5 +1,6 @@
 package com.noviceModDev.extrackapp;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,6 +82,7 @@ public class HouseHoldAdapter extends RecyclerView.Adapter<HouseHoldAdapter.List
         public void onClick(View view) {
 //            int pos = getAdapterPosition(); getAbsoluteAdapterPosition();
             int pos = getAbsoluteAdapterPosition();
+            //Log.d("info", "MSG: adatper position is " + pos);
             if (pos != RecyclerView.NO_POSITION) {
                 mainActivity.onItemClick(pos);
             }
