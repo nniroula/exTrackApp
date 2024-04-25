@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ExTrack App</string>
+    <string name="label_view_household_display_items">DisplayHouseHoldItems</string>
+    <string name="label_houseHoldDisplayDate">HouseHoldDisplayDate</string>
+    <string name="label_household_display_amount">HouseHoldDisplayAmount</string>
+    <string name="button_main_menu">MainMenuButton</string>
+    <string name="button_delete">DeleteButton</string>
+    <string name="button_household_item_add">HouseHoldItemAdd</string>
 </resources>

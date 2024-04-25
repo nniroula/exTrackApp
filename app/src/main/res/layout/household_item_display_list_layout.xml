@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/textViewHouseHoldItemDisplayDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="TextView" />
+
+<TextView
+    android:id="@+id/textViewHouseHoldDisplayAmount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="TextView"
+    android:textColor="#008000" />
+
+    <Button
+        android:id="@+id/buttonHouseHoldItemAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/button_household_item_add"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -6,6 +6,10 @@ android {
     namespace = "com.noviceModDev.extrackapp"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.noviceModDev.extrackapp"
         minSdk = 24
