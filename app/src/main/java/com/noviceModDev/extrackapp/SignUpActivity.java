@@ -35,6 +35,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         btnCancel = (Button)findViewById(R.id.btnCancel);
 
         btnSignUp.setOnClickListener(this);
+
+        // cancel button event listener
+        //btnCancel.setOnClickListener(this);
+
+        Intent intent = new Intent(this, MainActivity.class);
+        btnCancel.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick (View v) {
+                        //startActivity(intent);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     @Override
