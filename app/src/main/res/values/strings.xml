@@ -9,9 +9,12 @@
     <string name="add_household_item">Add Household Item</string>
     <string name="houseHoldTotal">$0.00</string>
     <string name="UserNameLabel">User Name</string>
+
     <string name="PasswordInput">Enter Password</string>
     <string name="UserNameInput">Enter Username</string>
+
     <string name="password">Password</string>
+
     <string name="LoginUserNameLabel">Username</string>
     <string name="LoginUserNameInput">Enter Username</string>
     <string name="LoginPassword">Password</string>
