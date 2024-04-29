@@ -125,6 +125,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        // clicked on login activity
+        if(id == R.id.action_login){
+            Intent intent = new Intent(this, LoginActivity.class);
+            //intent.putExtra("SUM", getHouseHoldTotalCost());
+            //startActivity(intent);
+            startActivity(intent);
+        }
+
         return true;
     }
 
