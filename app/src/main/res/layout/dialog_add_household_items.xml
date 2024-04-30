@@ -13,13 +13,44 @@ android:layout_height="wrap_content">
     android:minHeight="?attr/actionBarSize"
     android:theme="?attr/actionBarTheme" />
 
+    <TextView
+        android:layout_below="@id/addHouseHoldItem"
+        android:id="@+id/textViewDisplayHouseHoldTotalLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Total Expenditure:"
+        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/design_default_color_secondary_variant"/>
+    <TextView
+        android:id="@+id/textViewDisplayHouseHoldTotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/houseHoldTotal"
+        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/design_default_color_secondary_variant"/>
+
+    <View
+        android:id="@+id/dividerHouseHoldTotal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="15dp"/>
+
 <TextView
     android:id="@+id/textView1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:text="Add Household Item"
-    android:textSize="24sp" />
+    android:text="@string/add_household_item"
+    android:textSize="24sp"
+
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textColor="@color/design_default_color_primary_dark"
+    />
 
 <View
     android:id="@+id/divider"
@@ -35,7 +66,7 @@ android:layout_height="wrap_content">
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="householdDate">
+        android:hint="Household Date">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputHouseholdDate"
@@ -51,7 +82,7 @@ android:layout_height="wrap_content">
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="ItemDescription (Required)">
+        android:hint="Item Description (Required)">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputHouseholdItemDescription"
@@ -76,6 +107,17 @@ android:layout_height="wrap_content">
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:layout_below="@id/addHouseHoldItem"
+        android:text="Household Expenditure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"

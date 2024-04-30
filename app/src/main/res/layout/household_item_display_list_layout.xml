@@ -17,15 +17,17 @@ android:orientation="vertical">
     android:text="TextView"
     android:textColor="#008000" />
 
-    <Button
-        android:id="@+id/buttonHouseHoldItemAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        style="?android:attr/buttonBarButtonStyle"
-        android:layout_margin="4dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_blue_dark"
-        android:text="@string/button_household_item_add"
-        android:textSize="18sp" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonHouseHoldItemAdd"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        style="?android:attr/buttonBarButtonStyle"-->
+<!--        android:layout_margin="4dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@android:color/holo_blue_dark"-->
+<!--        android:text="@string/button_household_item_add"-->
+<!--        android:textSize="18sp" />-->
 
 </LinearLayout>
+
+
