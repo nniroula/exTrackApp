@@ -26,14 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<HouseHoldItem> listOfHouseHoldItems;
     // need household adapter
     private HouseHoldAdapter houseHoldAdapter;
-
     private DialogAddHouseholdItemsBinding bindingAddHouseHoldDialog;
     private DialogShowHouseholdTotalBinding bindingShowHouseHoldTotal;
-
     private TextView textViewDisplayHouseHoldTotalAmount;
-
-    // database
-    //SimpleDataBaseHandler db;
     DBHandler db;
 
     @Override
@@ -61,28 +56,21 @@ public class MainActivity extends AppCompatActivity {
         binding.hosueHoldContentXMLfile.recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         binding.hosueHoldContentXMLfile.recyclerView.setAdapter(houseHoldAdapter);
 
-
-
         // textView to display total
         textViewDisplayHouseHoldTotalAmount = findViewById(R.id.textViewDisplayHouseHoldTotalAmount);
 
         // Database
         db = new DBHandler(this);
-       // db.addNewItem("jj", "12", "kk", "402");
-       // db.insertData("NK");
-        Toast.makeText(this, "data saved in DB", Toast.LENGTH_LONG).show();
 
         } // End onCreate method
 
 
     public boolean onCreateOptionsMenu (Menu menu) {
         getMenuInflater().inflate(R.menu.menu_activity_main, menu);
-
         //
         double total = getHouseHoldTotalCost();
-        Log.d("info:", "MSG: total is Main Activity HERE ******" + String.valueOf(total));
+       // Log.d("info:", "MSG: total is Main Activity HERE ******" + String.valueOf(total));
         //
-
         return true;
     }
 
@@ -91,48 +79,30 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_household) {
-
-            //
             TextView textViewDisplayHouseHoldTotalAmount = findViewById(R.id.textViewDisplayHouseHoldTotalAmount);
-           // textViewDisplayHouseHoldTotalAmount.setText((int) getHouseHoldTotalCost());
-            //textViewDisplayHouseHoldTotalAmount.setText("HAHHAAAH");
-//            textViewDisplayHouseHoldTotalAmount.postInvalidate();
 
-//             for displaying add household item dialog box, works fine WORKS GREATE
+            // for displaying add household item dialog box, works fine WORKS GREATE
             AddHouseHoldItemDialog addHouseHoldItemDialog = new AddHouseHoldItemDialog();
             addHouseHoldItemDialog.show(getSupportFragmentManager(), "");
 
-//            double total = getHouseHoldTotalCost();
-//            Log.d("info:", "MSG: total is Main Activity MENU ******" + String.valueOf(total));
-
-
-//            // NEW concept, works fine as well
-//            Log.d("info:", "MSG: onOptionsItemSelected Main activity file");
-//            Intent intent = new Intent(this, HouseHoldShowTotalActivity.class);
-//            intent.putExtra("SUM", getHouseHoldTotalCost());
-//            startActivity(intent);
-
-
-//            ShowHouseHoldTotal showHHTotal = new ShowHouseHoldTotal();
-//            showHHTotal.show(getSupportFragmentManager(), "");
+          //  double total = getHouseHoldTotalCost();
+            // NEW concept, works fine as well
+            //Intent intent = new Intent(this, HouseHoldShowTotalActivity.class);
+            //intent.putExtra("SUM", getHouseHoldTotalCost());
+            //startActivity(intent);
 
         }
         // signup clicked
         if(id == R.id.action_signup){
             Intent intent = new Intent(this, SignUpActivity.class);
-            //intent.putExtra("SUM", getHouseHoldTotalCost());
-            //startActivity(intent);
             startActivity(intent);
         }
 
         // clicked on login activity
         if(id == R.id.action_login){
             Intent intent = new Intent(this, LoginActivity.class);
-            //intent.putExtra("SUM", getHouseHoldTotalCost());
-            //startActivity(intent);
             startActivity(intent);
         }
-
         return true;
     }
 
@@ -140,18 +110,11 @@ public class MainActivity extends AppCompatActivity {
         listOfHouseHoldItems.add(householdItem);
         houseHoldAdapter.notifyDataSetChanged();
 
-        // **********************
-//        listOfHouseHoldItems.get(0).getCostAmount();
-//        Log.d("info", "MSG: item cost is " + listOfHouseHoldItems.get(0).getCostAmount());
-
         getHouseHoldTotalCost();
-        // *******************************************
 //        // add display total amount
 //        TextView textViewDisplayHouseHoldTotalAmount  = bindingAddHouseHoldDialog.textViewDisplayHouseHoldTotalAmount;
 ////        textViewDisplayHouseHoldTotalAmount.setText((int) mainActivityFragment.getHouseHoldTotalCost());
 //        textViewDisplayHouseHoldTotalAmount.setText((int) getHouseHoldTotalCost());
-
-
     }
 
     // on item click
@@ -172,8 +135,6 @@ public class MainActivity extends AppCompatActivity {
 
     // show house hold total
     public void showHouseHoldItem (HouseHoldItem householdItem) {
-//        listOfHouseHoldItems.add(householdItem);
-//        houseHoldAdapter.notifyDataSetChanged();
         listOfHouseHoldItems.add(householdItem);
         houseHoldAdapter.notifyDataSetChanged();
     }
@@ -187,26 +148,13 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i< listOfHouseHoldItems.size(); i++){
             sum = sum + Double.parseDouble(listOfHouseHoldItems.get(i).getCostAmount());
         }
-
-
-        Log.d("info", "MSG: HH item cost in Main Activity getHouseHoldTotalCost method sum is " + sum);
         // Decimal formatter
 //        DecimalFormat df = new DecimalFormat("#, ##0.00");
 //        Log.d("info:", "formatted num is ......" + df.format(sum));
         //String sumValue = df.format(sum);
-
-
 //       TextView textViewDisplayHouseHoldTotalAmount = findViewById(R.id.textViewDisplayHouseHoldTotalAmount);
-//
 //        textViewDisplayHouseHoldTotalAmount.setText(df.format(sum));
 
         return sum;
     }
-
-    // database handler
-//    public void handleDB(String itemDescription, String date, String cost, String total){
-//        DBHandler dbHandler = new DBHandler(MainActivity.this);
-//        dbHandler.addNewItem(itemDescription, date, cost, total);
-//    }
-
 }
