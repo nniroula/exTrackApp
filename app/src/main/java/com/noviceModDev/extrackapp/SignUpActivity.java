@@ -31,19 +31,17 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signUpUserNameInput = findViewById(R.id.signupUserNameInput);
         signUpPasswordInput = findViewById(R.id.signupPasswordInput);
 
-        btnSignUp = (Button)findViewById(R.id.btnSignUp);
-        btnCancel = (Button)findViewById(R.id.btnCancel);
+        btnSignUp = findViewById(R.id.btnSignUp);
+        btnCancel = findViewById(R.id.btnCancel);
 
         btnSignUp.setOnClickListener(this);
 
         // cancel button event listener
         //btnCancel.setOnClickListener(this);
-
         Intent intent = new Intent(this, MainActivity.class);
         btnCancel.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick (View v) {
-                        //startActivity(intent);
                         startActivity(intent);
                     }
                 }
@@ -57,7 +55,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         String passwordInput = signUpPasswordInput.getText().toString();
         // validate the password - validatePassword() - define this method
         if(validPassword(passwordInput)){
-            Toast.makeText(getBaseContext(), "Valid password", Toast.LENGTH_LONG).show();
+            // add it to database // hash a password
+            DBHandler db = new DBHandler(this);
+            db.populateUsersTable(userNameInput, passwordInput);
 
             // bundle username and password together and send it to login activity
             Bundle bundleObj = new Bundle();
@@ -69,18 +69,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             intent.putExtra("signUpData", bundleObj);
             startActivity(intent);
         }else{
-            Toast toast = Toast.makeText(getBaseContext(), "Min lenght = 3. Must have at least one each of a lower case, upper case and digit.", Toast.LENGTH_LONG);
-           // Toast toast = Toast.makeText(this, "Amount must be a decimal number.", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getBaseContext(), "Min 3 characters. Must have at least one each of a lower case, upper case and digit.", Toast.LENGTH_LONG);
             toast.setMargin(4, 4);
             toast.show();
         }
-
     }
-    //
+
     private boolean validPassword(String pass){
         Pattern patternObj = Pattern.compile(passwordPattern);
         Matcher matcherObj = patternObj.matcher(pass);
-
         return matcherObj.matches();
     }
 }

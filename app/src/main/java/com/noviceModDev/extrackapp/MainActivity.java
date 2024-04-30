@@ -131,6 +131,11 @@ public class MainActivity extends AppCompatActivity {
         HouseHoldItem currentHouseHoldItem = listOfHouseHoldItems.get(index);
         listOfHouseHoldItems.remove(currentHouseHoldItem);
         houseHoldAdapter.notifyDataSetChanged();
+
+        // use database to delete as well
+        String descp = currentHouseHoldItem.getItemDescription();
+        String itemDate = currentHouseHoldItem.getPurchaseDate();
+
     }
 
     // show house hold total

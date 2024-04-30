@@ -54,6 +54,22 @@ public class DBHandler extends SQLiteOpenHelper {
         return true;
     }
 
+//    public void deleteItem(String itemName, String date){
+    public void deleteItemFromDataBase(String itemName){
+        SQLiteDatabase db = this.getWritableDatabase();
+//        String deleteQuery;
+//        if(date.isEmpty()){
+//            deleteQuery = "DELETE FROM household WHERE item = itemName";
+//        }else{
+//            deleteQuery = "DELETE FROM household WHERE item = itemName AND date = date";
+//        }
+//        db.execSQL(deleteQuery);
+        db.delete("household", "item=?", new String[]{itemName});
+        db.close();
+
+//        db.delete(TABLE_NAME, "name=?", new String[]{courseName});
+//        db.close();
+    }
 
 //    public boolean retrieveData(){
 //        SQLiteDatabase db = this.getReadableDatabase();
