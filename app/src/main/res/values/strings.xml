@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">ExTrack App</string>
-    <string name="label_view_household_display_items">DisplayHouseHoldItems</string>
-    <string name="label_houseHoldDisplayDate">HouseHoldDisplayDate</string>
-    <string name="label_household_display_amount">HouseHoldDisplayAmount</string>
-    <string name="button_main_menu">MainMenuButton</string>
-    <string name="button_delete">DeleteButton</string>
+    <string name="label_view_household_display_items">Item Details</string>
+    <string name="label_houseHoldDisplayDate">Purchase Date</string>
+    <string name="label_household_display_amount">Spent Amount</string>
+    <string name="button_main_menu">Main Menu</string>
+    <string name="button_delete">Delete</string>
+
     <string name="button_household_item_add">HouseHoldItemAdd</string>
-    <string name="add_household_item">Add Household Item</string>
+    <string name="add_household_item">Add New Item</string>
     <string name="houseHoldTotal">$0.00</string>
-    <string name="UserNameLabel">User Name</string>
+    <string name="UserNameLabel">Username</string>
 
     <string name="PasswordInput">Enter Password</string>
     <string name="UserNameInput">Enter Username</string>
